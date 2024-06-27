@@ -1,0 +1,22 @@
+<!doctype html>
+
+<head>
+    <title>{% block title %}{% endblock %} - Sistema CadPes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>CadTudo 1.0</h1>
+    <a href="{{ url_for("home") }}">Página inicial</a> 
+    <a href="{{ url_for("about") }}">Sobre o Sistema</a> | 
+    <a href="{{ url_for("listar_pessoas") }}">Listagem</a>
+    <hr/>
+
+    <section class="content">
+        <header> {% block header %}{% endblock %} </header>
+
+        {% block content %}{% endblock %}
+    </section>
+
+</body>

@@ -1,0 +1,23 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+<h1>{% block title %}Cadastrar pessoa{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="adicionar_pessoa">
+    <p>
+        Nome: <input type="text" name="nome" value="João da Silva">
+    </p>
+    <p>
+        Email: <input type="text" name="email" value="jo@gmail.com">
+    </p>
+    <p>
+        Telefone: <input type="text" name="telefone" value="47 9 9123 4567">
+    </p>
+
+    <button>Cadastrar</button>
+</form>
+
+{% endblock %}

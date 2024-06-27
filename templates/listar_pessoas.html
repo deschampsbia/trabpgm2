@@ -1,0 +1,30 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+  <h1>{% block title %}Listagem de pessoas{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  
+<p>
+    <a href="{{ url_for("form_adicionar_pessoa") }}">Cadastrar nova pessoa</a>
+</p>
+
+<table border="1">
+    <tr>
+        <td>Nome</td>
+        <td>Email</td>
+        <td>Telefone</td>
+    </tr>
+
+    {% for p in pessoas %}
+    <tr>
+        <td>{{p.nome}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.telefone}}</td>
+    </tr>
+    {% endfor %}
+   
+</table>
+
+{% endblock %}
